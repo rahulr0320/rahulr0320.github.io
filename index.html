@@ -1,633 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Rahul Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-
-
-
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rahul R | AI &amp; Machine Learning Graduate</title>
+<meta name="description" content="Rahul R – Computer Science graduate specializing in Artificial Intelligence. Machine learning, Generative AI, and software development portfolio.">
+<meta name="theme-color" content="#0b0f17">
+<meta property="og:title" content="Rahul R | AI &amp; Machine Learning Graduate">
+<meta property="og:image" content="images/profile.jpg">
+<link rel="icon" href="images/profile.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Rahul R","url":"https://rahulr0320.github.io/","email":"mailto:rr02122003@gmail.com","address":{"@type":"PostalAddress","addressRegion":"Kerala","addressCountry":"IN"},"alumniOf":"Karunya Institute of Technology and Sciences","jobTitle":"Computer Science Graduate (Artificial Intelligence)","sameAs":["https://github.com/rahulr0320","https://linkedin.com/in/rahulrajesh2003"]}</script>
 <style>
-
-/*======================================
-//--//-->   ABOUT
-======================================*/
-
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+:root{--bg:#0b0f17;--surface:#121826;--surface2:#182033;--line:#243049;--text:#e6eaf2;--muted:#98a2b8;--accent:#5eead4;--accent2:#7c9cff;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.eyebrow{font:500 .8rem 'JetBrains Mono',monospace;color:var(--accent);letter-spacing:.12em;text-transform:uppercase}
+h2{font-size:clamp(1.7rem,3vw,2.2rem);margin:6px 0 36px;letter-spacing:-.02em}
+.muted{color:var(--muted)}
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(11,15,23,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:700;letter-spacing:-.02em}.logo span{color:var(--accent)}
+nav ul{display:flex;gap:4px;list-style:none}
+nav ul a{padding:8px 12px;border-radius:8px;font-size:.9rem;color:var(--muted);transition:.2s}
+nav ul a:hover,nav ul a.active{color:var(--text);background:var(--surface2)}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--text);width:42px;height:42px;border-radius:10px;font-size:1.2rem;cursor:pointer}
+/* hero */
+#home{padding:140px 0 80px;min-height:100vh;display:flex;align-items:center}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4rem);line-height:1.1;letter-spacing:-.03em;margin:10px 0 14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.role{font-size:1.15rem;color:var(--muted);max-width:34em}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 28px}
+.tag{font-size:.8rem;padding:5px 12px;border:1px solid var(--line);border-radius:99px;color:var(--muted);background:var(--surface)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;gap:8px;align-items:center;padding:12px 22px;border-radius:10px;font-weight:600;font-size:.95rem;border:1px solid var(--line);transition:.2s}
+.btn.primary{background:var(--accent);color:#06201c;border-color:var(--accent)}
+.btn.primary:hover{background:#7ff3e1}
+.btn:not(.primary):hover{border-color:var(--accent);color:var(--accent)}
+.photo{justify-self:center;width:min(340px,80vw);aspect-ratio:1;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 0 0 8px var(--surface),0 24px 60px rgba(0,0,0,.5)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+/* cards */
+.grid{display:grid;gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--accent2)}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+.about p{color:var(--muted);font-size:1.05rem}
+.facts{list-style:none;display:grid;gap:12px}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--line);font-size:.95rem}
+.facts span:first-child{color:var(--muted)}
+.skills{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card h3{font-size:1.05rem;display:flex;gap:10px;align-items:center;margin-bottom:16px}
+.ico{width:36px;height:36px;border-radius:10px;background:var(--surface2);display:grid;place-items:center;font-size:1.05rem}
+.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badge{font-size:.82rem;padding:5px 11px;border-radius:8px;background:var(--surface2);border:1px solid var(--line)}
+/* projects */
+.proj{display:flex;flex-direction:column;gap:14px}
+.proj .num{font:500 .8rem 'JetBrains Mono',monospace;color:var(--muted)}
+.proj h3{font-size:1.2rem;line-height:1.35}
+.proj ul{padding-left:18px;color:var(--muted);font-size:.93rem;display:grid;gap:6px}
+.proj .links{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
+.proj .links a{font-size:.85rem;padding:7px 14px;border:1px solid var(--line);border-radius:8px}
+.proj .links a:hover{border-color:var(--accent);color:var(--accent)}
+.flagship{grid-column:1/-1;border-color:rgba(94,234,212,.45);background:linear-gradient(180deg,rgba(94,234,212,.05),var(--surface))}
+.flagship .metrics{display:flex;gap:28px;flex-wrap:wrap;margin:4px 0}
+.metrics b{display:block;font-size:1.8rem;color:var(--accent);line-height:1.1}
+.metrics small{color:var(--muted)}
+.pill{display:inline-block;font-size:.75rem;font-weight:600;padding:4px 12px;border-radius:99px;background:rgba(94,234,212,.12);color:var(--accent);border:1px solid rgba(94,234,212,.35);width:fit-content}
+.pg{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+/* timeline */
+.tl{display:grid;gap:20px}
+.tl .card{display:grid;grid-template-columns:150px 1fr;gap:20px}
+.when{font:500 .85rem 'JetBrains Mono',monospace;color:var(--accent)}
+.tl h3{font-size:1.1rem}.tl .sub{color:var(--muted);font-size:.93rem;margin:2px 0 10px}
+.tl ul{padding-left:18px;color:var(--muted);font-size:.93rem;display:grid;gap:4px}
+.certs{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.cert{display:flex;gap:14px;align-items:center;padding:18px 20px}
+.langs{margin-top:48px}
+/* contact */
+.contact{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.contact a.card{display:block}
+.contact small{color:var(--muted);display:block}
+.contact strong{word-break:break-word;font-size:.95rem}
+footer{padding:28px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.85rem}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:860px){
+ .hero,.about{grid-template-columns:1fr}.photo{order:-1;width:min(240px,70vw)}
+ #home{padding-top:110px}.tl .card{grid-template-columns:1fr;gap:6px}
+ .burger{display:block}
+ nav ul{position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 24px 18px;display:none}
+ nav ul.open{display:flex}
 }
-
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
-
-.about-mf .about-img img {
-  margin-left: 10px;
-}
-
-
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
-
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
-
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
-
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.card{transition:none}}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:#06201c;padding:8px 14px;border-radius:8px;z-index:100;font-weight:600}.skip:focus{left:8px}
+.progress{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:60}
+svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ico svg{width:19px;height:19px;color:var(--accent)}.btn svg{width:17px;height:17px}
+#home{position:relative;background:radial-gradient(600px 300px at 80% 20%,rgba(94,234,212,.07),transparent 70%),linear-gradient(var(--line) 1px,transparent 1px) 0 0/100% 56px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/56px 100%;background-color:var(--bg)}
+#home::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 30%,var(--bg) 85%);pointer-events:none}
+#home .wrap{position:relative;z-index:1}
+.stats{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:0;margin-top:40px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);width:fit-content;max-width:100%}
+.stats div{padding:14px 22px;border-right:1px solid var(--line)}.stats div:last-child{border:0}
+.stats dt{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}.stats dd{font-weight:600;font-size:1.05rem;margin-top:2px}
+.contact .card{display:flex;gap:14px;align-items:center;padding:20px}
+.top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;display:grid;place-items:center;opacity:0;pointer-events:none;transition:.25s;z-index:40}
+.top.show{opacity:1;pointer-events:auto}.top:hover{border-color:var(--accent);color:var(--accent)}.top svg{width:20px;height:20px}
+.card{box-shadow:0 1px 0 rgba(255,255,255,.03) inset}
+.proj .badges{margin-top:2px}.proj .num{letter-spacing:.06em;text-transform:uppercase}
+@media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr);width:100%}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media print{nav,.top,.progress,#home::after{display:none}body{background:#fff;color:#000}.card{border-color:#ccc;background:#fff}.reveal{opacity:1;transform:none}}
 </style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+<symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+<symbol id="i-brain" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7zM2 12l10 5 10-5M2 17l10 5 10-5"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1M17 4.5a3.5 3.5 0 0 1 0 7M22 21v-1a6 6 0 0 0-4-5.6"/></symbol>
+<symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 17v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7A2 2 0 0 1 22 17z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-in" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13a3 3 0 0 1 6 0v4"/></symbol>
+<symbol id="i-gh" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-1-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.900 1S18.700.6 16 2.500a13.400 13.400 0 0 0-7 0C6.300.6 5.100 1 5.100 1A5 5 0 0 0 5 4.800 5.400 5.400 0 0 0 3.500 8.500c0 5.500 3.300 6.700 6.400 7a3.400 3.400 0 0 0-1 2.600V22"/></symbol>
+<symbol id="i-dl" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+</defs></svg>
+<a class="skip" href="#about">Skip to content</a>
+<div class="progress" id="bar" aria-hidden="true"></div>
+<nav aria-label="Main">
+ <div class="wrap">
+  <a href="#home" class="logo">Rahul<span>.R</span></a>
+  <button class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
+  <ul id="menu">
+   <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li>
+   <li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#certifications">Certifications</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+ </div>
+</nav>
 
+<main>
+<section id="home"><div class="wrap hero">
+ <div>
+  <p class="eyebrow">Hello, I'm</p>
+  <h1>Rahul <em>R</em></h1>
+  <p class="role">Computer Science graduate specializing in Artificial Intelligence, building intelligent applications with machine learning and Generative AI.</p>
+  <div class="tags"><span class="tag">AI &amp; Machine Learning</span><span class="tag">Generative AI</span><span class="tag">Software Development</span><span class="tag">Cybersecurity</span></div>
+  <div class="btns">
+   <a class="btn primary" href="#projects">View Projects</a>
+   <a class="btn" href="https://drive.google.com/file/d/1DiNi4-kZeL_cq-AvVnCJYwHX-yF2u6Zr/view?usp=drive_link" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-dl"/></svg>Download CV</a>
+   <a class="btn" href="https://github.com/rahulr0320" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-gh"/></svg>GitHub</a>
+   <a class="btn" href="https://linkedin.com/in/rahulrajesh2003" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-in"/></svg>LinkedIn</a>
+  </div>
+<dl class="stats"><div><dt>CGPA</dt><dd>8.94</dd></div><div><dt>Research</dt><dd>IEEE Published</dd></div><div><dt>Projects</dt><dd>4</dd></div><div><dt>Certifications</dt><dd>7</dd></div></dl>
+ </div>
+ <div class="photo"><picture><source srcset="images/profile.webp" type="image/webp"><img src="images/profile.jpg" width="800" height="800" alt="Portrait of Rahul R" fetchpriority="high"></picture></div>
+</div></section>
 
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">RAHUL R</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+<section id="about"><div class="wrap">
+ <p class="eyebrow">01 / About</p><h2>About Me</h2>
+ <div class="about reveal">
+  <p>Computer Science graduate specializing in Artificial Intelligence, passionate about transforming innovative ideas into impactful technology solutions. Proficient in Python, machine learning, backend development, and cloud technologies, with hands-on experience in developing intelligent applications across diverse domains. Experienced in research-driven projects, including IEEE-published work. A curious problem-solver driven by continuous learning, creativity, and a strong commitment to building efficient, scalable, and meaningful technological solutions.</p>
+  <ul class="facts card">
+   <li><span>Name</span><span>Rahul R</span></li><li><span>Location</span><span>Kerala, India</span></li>
+   <li><span>Degree</span><span>B.Tech CSE (AI)</span></li><li><span>CGPA</span><span>8.94</span></li>
+   <li><span>Languages</span><span>English, Hindi, Malayalam</span></li>
+  </ul>
+ </div>
+</div></section>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/p1a.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Rahul R</span></h1>
+<section id="skills"><div class="wrap">
+ <p class="eyebrow">02 / Skills</p><h2>Technical Skills</h2>
+ <div class="grid skills">
+  <div class="card reveal"><h3><span class="ico"><svg aria-hidden="true"><use href="#i-code"/></svg></span>Programming</h3><div class="badges"><span class="badge">Python</span><span class="badge">C</span><span class="badge">Java</span><span class="badge">SQL</span><span class="badge">JavaScript</span><span class="badge">HTML</span><span class="badge">CSS</span></div></div>
+  <div class="card reveal"><h3><span class="ico"><svg aria-hidden="true"><use href="#i-db"/></svg></span>Databases &amp; Visualization</h3><div class="badges"><span class="badge">MySQL</span><span class="badge">PostgreSQL</span><span class="badge">MongoDB</span><span class="badge">Tableau</span><span class="badge">Power BI</span><span class="badge">Streamlit</span></div></div>
+  <div class="card reveal"><h3><span class="ico"><svg aria-hidden="true"><use href="#i-brain"/></svg></span>AI &amp; Machine Learning</h3><div class="badges"><span class="badge">Supervised Learning</span><span class="badge">Unsupervised Learning</span><span class="badge">Deep Learning</span><span class="badge">NLP</span><span class="badge">Generative AI</span></div></div>
+  <div class="card reveal"><h3><span class="ico"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>Libraries &amp; Frameworks</h3><div class="badges"><span class="badge">Pandas</span><span class="badge">NumPy</span><span class="badge">Scikit-learn</span><span class="badge">TensorFlow</span><span class="badge">Keras</span></div></div>
+  <div class="card reveal"><h3><span class="ico"><svg aria-hidden="true"><use href="#i-users"/></svg></span>Soft Skills</h3><div class="badges"><span class="badge">Communication</span><span class="badge">Leadership</span><span class="badge">Quick Learner</span><span class="badge">Problem-Solving</span></div></div>
+ </div>
+</div></section>
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
+<section id="projects"><div class="wrap">
+ <p class="eyebrow">03 / Projects</p><h2>Featured Projects</h2>
+ <div class="grid pg">
+  <article class="card proj flagship reveal">
+   <span class="pill">★ Flagship · IEEE Published Research</span>
+   <h3>AI-Enabled Patient Health Monitoring System</h3>
+   <div class="metrics"><div><b>98%</b><small>vital anomaly detection accuracy</small></div></div>
+   <ul>
+    <li>Developed dual Random Forest models for patient vital anomaly detection and diabetes risk prediction.</li>
+    <li>Implemented AES-256-EAX encryption and SHAP-based visualizations for secure and interpretable predictions.</li>
+    <li>Integrated an LLM assistant to analyze patient vitals, EHR, and medication records to generate personalized emergency protocols.</li>
+    <li>Built a Streamlit clinical dashboard with patient monitoring and analytics, achieving 98% accuracy in vital anomaly detection.</li>
+   </ul>
+   <div class="badges"><span class="badge">Python</span><span class="badge">Random Forest</span><span class="badge">SHAP</span><span class="badge">AES-256-EAX</span><span class="badge">Generative AI</span><span class="badge">Streamlit</span></div>
+  </article>
 
-						<script>
+  <article class="card proj reveal">
+   <span class="num">02 · Machine Learning</span><h3>Calories Burnt Prediction Using XGBoost Regression</h3>
+   <ul>
+    <li>Developed a machine learning model using XGBoost Regression to predict calories burnt based on user activity and physiological data.</li>
+    <li>Applied gradient boosting techniques to improve prediction performance and reduce model errors by 18%.</li>
+    <li>Extracted relevant features from activity datasets to improve prediction reliability by 15%.</li>
+    <li>Achieved 92% prediction accuracy.</li>
+   </ul>
+   <div class="badges"><span class="badge">Python</span><span class="badge">Machine Learning</span><span class="badge">XGBoost</span><span class="badge">Regression Analysis</span></div>
+  </article>
 
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
+  <article class="card proj reveal">
+   <span class="num">03 · IoT &amp; Embedded</span><h3>IoT Solar Power Monitoring and Management System</h3>
+   <ul>
+    <li>Developed an ESP32-based solar power monitoring solution to track system performance and improve monitoring accuracy by 25%.</li>
+    <li>Implemented monitoring and fault detection mechanisms to identify system irregularities and minimize downtime by 40%.</li>
+    <li>Integrated cloud storage solutions for efficient data management and accessibility.</li>
+    <li>Contributed to achieving 99.9% system uptime through performance optimization.</li>
+   </ul>
+   <div class="badges"><span class="badge">ESP32</span><span class="badge">IoT</span><span class="badge">Cloud Storage</span><span class="badge">Monitoring Systems</span></div>
+   <div class="links"><a href="https://github.com/rahulr0320/IoT-Solar-Power-Monitoring-and-Management-System" target="_blank" rel="noopener">GitHub ↗</a></div>
+  </article>
 
-						// Create an array of typing text
-						const typingTexts = [
-						'Student  ',
-						
-						];
+  <article class="card proj reveal">
+   <span class="num">04 · Computer Vision</span><h3>AI-Powered Driver Drowsiness Detection System</h3>
+   <ul>
+    <li>Implemented real-time facial detection using computer vision techniques.</li>
+    <li>Monitored facial landmarks and eye-related features to identify visual indicators of driver fatigue and drowsiness.</li>
+    <li>Integrated a pre-trained deep learning model to classify drowsiness conditions.</li>
+    <li>Developed a monitoring approach to improve road safety through early detection.</li>
+   </ul>
+   <div class="badges"><span class="badge">Python</span><span class="badge">OpenCV</span><span class="badge">Computer Vision</span><span class="badge">Deep Learning</span></div>
+   <div class="links"><a href="https://github.com/rahulr0320/Drowsiness-Detection" target="_blank" rel="noopener">GitHub ↗</a></div>
+  </article>
+ </div>
+</div></section>
 
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
+<section id="experience"><div class="wrap">
+ <p class="eyebrow">04 / Experience</p><h2>Experience</h2>
+ <div class="tl"><div class="card reveal">
+  <div class="when">2024</div>
+  <div><h3>Web Development Intern</h3><p class="sub">Next24tech Technology &amp; Services</p>
+  <ul><li>Developed responsive web pages using HTML, CSS, JavaScript, and React.</li><li>Collaborated with the development team to improve website functionality and user experience.</li><li>Gained hands-on experience in front-end and full-stack web development.</li></ul></div>
+ </div></div>
+</div></section>
 
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
+<section id="education"><div class="wrap">
+ <p class="eyebrow">05 / Education</p><h2>Education</h2>
+ <div class="tl">
+  <div class="card reveal"><div class="when">2022 – 2026</div><div><h3>Bachelor of Technology in Computer Science and Engineering (Artificial Intelligence)</h3><p class="sub">Karunya Institute of Technology and Sciences · Coimbatore, India</p><ul><li>CGPA: 8.94</li></ul></div></div>
+  <div class="card reveal"><div class="when">2021</div><div><h3>Higher Secondary</h3><p class="sub">Bhavans Vidya Mandir · Palakkad, India</p><ul><li>Percentage: 91%</li></ul></div></div>
+ </div>
+</div></section>
 
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
+<section id="certifications"><div class="wrap">
+ <p class="eyebrow">06 / Certifications</p><h2>Certifications</h2>
+ <div class="grid certs">
+  <div class="card cert reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-award"/></svg></span>IoT Fundamentals: Connected Things</div>
+  <div class="card cert reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-award"/></svg></span>PCAP: Programming Essentials in Python</div>
+  <div class="card cert reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-award"/></svg></span>Java Programming Fundamentals – Infosys</div>
+  <div class="card cert reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-award"/></svg></span>Introduction to Artificial Intelligence – Simplilearn</div>
+  <div class="card cert reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-award"/></svg></span>CLA – Programming in Problem Solving</div>
+  <div class="card cert reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>Google Cybersecurity – Coursera</div>
+  <div class="card cert reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-globe"/></svg></span>Network Addressing and Basic Troubleshooting – Cisco</div>
+ </div>
+ <div class="langs reveal"><h2 style="margin-bottom:18px">Languages</h2>
+  <div class="badges"><span class="badge">English</span><span class="badge">Hindi</span><span class="badge">Malayalam (Native Speaker)</span></div></div>
+</div></section>
 
-						</script>
+<section id="contact"><div class="wrap">
+ <p class="eyebrow">07 / Contact</p><h2>Get in Touch</h2>
+ <div class="grid contact">
+  <a class="card reveal" href="mailto:rr02122003@gmail.com"><span class="ico"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>Email</small><strong>rr02122003@gmail.com</strong></span></a>
+  <a class="card reveal" href="tel:+919539438755"><span class="ico"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><span><small>Phone</small><strong>+91 9539438755</strong></span></a>
+  <a class="card reveal" href="https://linkedin.com/in/rahulrajesh2003" target="_blank" rel="noopener"><span class="ico"><svg aria-hidden="true"><use href="#i-in"/></svg></span><span><small>LinkedIn</small><strong>rahulrajesh2003</strong></span></a>
+  <a class="card reveal" href="https://github.com/rahulr0320" target="_blank" rel="noopener"><span class="ico"><svg aria-hidden="true"><use href="#i-gh"/></svg></span><span><small>GitHub</small><strong>rahulr0320</strong></span></a>
+  <div class="card reveal"><span class="ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span><small>Location</small><strong>Kerala, India</strong></span></div>
+ </div>
+</div></section>
+</main>
+<button class="top" id="top" aria-label="Back to top"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+<footer>© <span id="yr"></span> Rahul R · <a href="https://rahulr0320.github.io/">rahulr0320.github.io</a></footer>
 
-						<br>
-						<br>
-			            <h2>A Computer science student</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/rahulrajesh2003/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
-							<a href="https://github.com/rahulr0320" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/p5a.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Rahul R</span></p>
-										<p><span class="title-s">Role: </span> <span>Computer Science Student</span></p>
-										<!-- <p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> -->
-										<p><span class="title-s">Address: </span> <span>Kerala, India</span></p>
-									  </div>
-									</div>
-								  </div>
-
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>C programming</span> <span class="pull-right">65%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>PYTHON</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>JAVA</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<!-- <span>Statistical Analysis</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div> -->
-									
-									<!-- <span>Machine Learning</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div> -->
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>As a dedicated computer science student, I possess a strong foundation in key programming languages, algorithms, and
-									data structures. Proficient in Python, C, and Java, with hands-on experience in software development, system design,
-									and problem-solving. Eager to contribute effectively to innovative projects and teams in computer science.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Computer Science &amp; Student</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Artificial Intelligence &amp; Machine Learning</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Malayalam, Hindi</span></li>
-									<li class="d-flex"><span>AI Tools:</span> <span>Chatgpt, Keras &amp; Jasper</span></li>
-									<!-- <li class="d-flex"><span>Other Skills:</span> <span>Cloud, PySpark, Excel, Git, JIRA, Google Analytics &amp; SEO</span></li> -->
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Football, Reading</span></li>
-									
-								</ul>
-							</div>
-						</div>
-
-
-						<!-- <div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="30">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/rishabhnmishra/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div> -->
-				</div>
-			</div>
-		</div>
-    </section>
-
-
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <!-- <p>Seasoned Senior Data Analyst with 5+ years of experience driving business strategies through data-driven insights. Proven expertise in data science, statistical analysis, machine learning algorithms and project management.</p> -->
-          </div>
-        </div>
-
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2021-Present</span>
-						<h2>Web development Intern</h2>
-						<span class="position">Next24 Technology and Services</span>
-						<p class="mt-4">Working as an intern in Next24 Technology and Services in the field of Web development. 
-							<ul>
-								<!-- <li>Analysed ad campaigns, clickstream, and customer surveys data, identified an increasing demand and launched a strategic product line.</li>
-								<li>Developed time series forecasting models to predict sales and optimize marketing budgets, got model performance of 92%.</li>
-								<li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
-							</ul>
-						</p>
-					</div>
-
-				</div>
-
-				<!-- <div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2018-2021</span>
-						<h2>Senior Data Analyst</h2>
-						<span class="position">iQuanti</span>
-						<p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands. 
-							<ul>
-								<li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li>
-								<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
-								<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
-							</ul>
-						</p>
-					</div> -->
-
-				</div>
-			</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2022-2026</span>
-    					<h2>Bachelor of Technology</h2>
-    					<span class="position">Karunya Institute of Technology abd Science , TamilNadu</span>
-    					<!-- <p class="mt-4">Grade: First class distinction.</p> -->
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">Completed on 2021</span>
-    					<h2>Higher Secondary School</h2>
-    					<span class="position">Bhavans Vidya Mandir, Kerala </span>
-    					<!-- <p class="mt-4">Grade: First class distinction.</p> -->
-    				</div>
-				</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="https://drive.google.com/file/d/1DiNi4-kZeL_cq-AvVnCJYwHX-yF2u6Zr/view?usp=drive_link" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
-   
-
-    <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample projects on Java, AI, Python, IOT, MySQL.</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/rahulr0320/ATM-Simulation-Java" class="block-20 zoom-effect" style="background-image: url('images/p4a.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/rahulr0320/ATM-Simulation-Java">ATM Simulation System using JAVA</a></h3>
-                <p>This Java-based ATM Simulation project with a Graphical User Interface (GUI) and MySQL integration aims to provide a realistic simulation of an Automated Teller Machine (ATM). It allows users to perform various banking operations, such as account balance inquiries, cash withdrawals, and deposits, while securely storing user data in a MySQL database.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/rahulr0320/IoT-Solar-Power-Monitoring-and-Management-System/blob/main/README.md" class="block-20 zoom-effect" style="background-image: url('images/solar-panel.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/rahulr0320/IoT-Solar-Power-Monitoring-and-Management-System/blob/main/README.md">IoT Solar Power Monitoring System with Street Light Control</a></h3>
-                <p>This is an IoT-based solar power monitoring system that utilizes solar panels to generate current. The project focuses on an example of a street light, which is controlled based on the light intensity using a light intensity sensor. An ESP32 development board is used for the project, along with Arduino Cloud for remote monitoring and control. Additional components used include a voltage sensor and an AC current sensor to display data on an LCD screen.
-
-				</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/rahulr0320/Drowsiness-Detection" class="block-20 zoom-effect" style="background-image: url('images/p2a.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Driver Drowsiness detection system using AI</a></h3>
-                <p>The project aims to enhance road safety by detecting signs of driver drowsiness and alerting them in real-time.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<!-- <div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
-				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
-				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
-				</div>
-			  </div>
-			</div>
-		 </div> -->
-	  </div>
-    </section>
-
-	<!-- <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="20">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="30">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="1000">0</strong>
-                <span>Mentored Students</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="500">0</strong>
-                <span>Cups of coffee</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<div class="container"> -->
-				<!-- <div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/rishabhnmishra" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div> -->
-			<!-- </div> -->
-		</div>
-	</section>
-
-
-
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
-          </div>
-        </div>
-
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Kerala, India</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p>+91 9539438755</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">rr02122003@gmail.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/file/d/1DiNi4-kZeL_cq-AvVnCJYwHX-yF2u6Zr/view?usp=drive_link">resumelink</a></p>
-	          </div>
-          </div>
-
-		  <div class="container">
-			<br>
-			<br>
-			<!-- <div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div>
-			</div> -->
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/rahulrajesh2003/"><span class="icon-linkedin"></span></a></li>  
-					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li> -->
-					  <li class="ftco-animate"><a href="https://github.com/rahulr0320"><span class="icon-github"></span></a></li>
-				      <!-- <li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span class="icon-instagram"></span></a></li> -->
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
-
-
- 
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	<!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p> -->
-			</div>
-		  </div>
-		</div>
-	  </footer>
-
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
-  </body>
+<script>
+const burger=document.querySelector('.burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+menu.addEventListener('click',e=>{if(e.target.tagName==='A'){menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}});
+document.getElementById('yr').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const links=[...menu.querySelectorAll('a')],secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.hash==='#'+e.target.id))}}),{rootMargin:'-40% 0px -55% 0px'});
+secs.forEach(s=>s&&so.observe(s));
+const bar=document.getElementById('bar'),top_=document.getElementById('top');
+addEventListener('scroll',()=>{const h=document.documentElement,p=h.scrollTop/(h.scrollHeight-h.clientHeight);bar.style.transform='scaleX('+p+')';top_.classList.toggle('show',h.scrollTop>600)},{passive:true});
+top_.addEventListener('click',()=>scrollTo({top:0}));
+</script>
+</body>
 </html>
